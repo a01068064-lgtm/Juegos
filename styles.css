@@ -1,0 +1,58 @@
+/* Tema Steam oscuro */
+:root{
+  --bg:#171a21; --bg2:#1b2838; --card:#16202d; --line:#2a475e;
+  --accent:#66c0f4; --accent2:#417a9b; --text:#c7d5e0; --muted:#8f98a0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);font-family:"Segoe UI",Arial,sans-serif;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.navbar{display:flex;align-items:center;gap:16px;padding:12px 24px;background:#171a21;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;flex-wrap:wrap}
+.logo{font-weight:800;font-size:22px;color:#fff;letter-spacing:1px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:14px}
+.nav-links a{color:var(--muted);font-weight:600}
+.nav-links a.active,.nav-links a:hover{color:#fff}
+.search{margin-left:auto;padding:8px 12px;border-radius:4px;border:1px solid var(--line);background:#0e141b;color:var(--text);min-width:200px}
+.userbox{display:flex;align-items:center;gap:8px}
+.btn{background:linear-gradient(90deg,#06bfff,#2d73ff);border:0;color:#fff;padding:8px 16px;border-radius:4px;cursor:pointer;font-weight:700}
+.btn:hover{filter:brightness(1.15)}
+.btn.ghost{background:#2a475e}
+.btn.small{padding:5px 10px;font-size:13px}
+.icon-btn{background:#2a475e;border:0;color:#fff;padding:8px 10px;border-radius:4px;cursor:pointer}
+.hero{max-width:1100px;margin:24px auto;padding:24px;background:linear-gradient(135deg,#2a475e,#1b2838);border-radius:8px;display:flex;gap:24px;align-items:center;min-height:220px}
+.hero-art{width:280px;height:160px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:70px;background:#0e141b;border:1px solid var(--line)}
+.hero h1{color:#fff;font-size:32px;margin-bottom:8px}
+.hero p{color:var(--muted);margin-bottom:14px}
+.container{max-width:1100px;margin:0 auto;padding:0 24px 40px}
+.section-title{margin:18px 0 12px;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.card-art{height:130px;display:flex;align-items:center;justify-content:center;font-size:56px;background:#0e141b}
+.card-body{padding:12px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-body h3{color:#fff}
+.tag{font-size:11px;background:#2a475e;display:inline-block;padding:2px 8px;border-radius:10px;color:var(--accent);width:fit-content}
+.card-body p{font-size:13px;color:var(--muted);flex:1}
+.footer{text-align:center;color:var(--muted);padding:24px;font-size:13px}
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:50}
+.modal.open{display:flex}
+.modal-box{background:#1b2838;border:1px solid var(--line);border-radius:8px;padding:24px;width:320px;display:flex;flex-direction:column;gap:10px}
+.modal-box h2{color:#fff}
+.modal-box input,.modal-box select{padding:9px;border-radius:4px;border:1px solid var(--line);background:#0e141b;color:var(--text)}
+.row{display:flex;gap:8px}
+.msg{font-size:13px;min-height:18px;color:#f2a33c}
+/* Página juego */
+.game-wrap{max-width:1000px;margin:20px auto;padding:0 20px 40px;display:flex;gap:20px;flex-wrap:wrap}
+.game-main{flex:1;min-width:300px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;text-align:center}
+.game-side{width:260px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;height:fit-content}
+.game-side h3{color:#fff;margin-bottom:8px}
+.game-side p,.game-side li{font-size:13px;color:var(--muted);margin-bottom:6px}
+canvas{background:#0e141b;border:1px solid var(--line);border-radius:4px;max-width:100%}
+#board{display:grid;grid-template-columns:repeat(3,90px);gap:8px;justify-content:center;margin:12px 0}
+#board button{width:90px;height:90px;font-size:42px;font-weight:800;background:#0e141b;color:#fff;border:1px solid var(--line);border-radius:6px;cursor:pointer}
+#board button:hover{border-color:var(--accent)}
+.topbar{max-width:1000px;margin:0 auto;padding:16px 20px 0;display:flex;align-items:center;gap:12px}
+.badge{background:#2a475e;padding:4px 10px;border-radius:12px;font-size:12px}
+.score{font-size:18px;color:#fff;margin:8px 0}
+.controls{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+@media(max-width:700px){.hero{flex-direction:column}.hero-art{width:100%}}
