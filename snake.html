@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snake - MiniSteam</title><link rel="stylesheet" href="css/styles.css"></head>
+<body>
+<div class="topbar"><a href="index.html" class="btn small ghost">← Volver</a>
+<span id="playerBadge" class="badge"></span>
+<button id="soundBtn" class="icon-btn">🔊</button></div>
+<div class="game-wrap">
+<div class="game-main"><h2 style="color:#fff">🐍 Snake</h2>
+<div class="score">Puntos: <span id="score">0</span> · Récord: <span id="best">0</span></div>
+<canvas id="cv" width="400" height="400"></canvas>
+<div class="controls"><button id="restart" class="btn small">Reiniciar</button></div></div>
+<aside class="game-side"><h3>Controles</h3><p>Flechas o WASD para mover.</p><h3>Cómo jugar</h3><p>Come los cuadros rojos. Cada uno = 10 pts y más velocidad.</p></aside>
+</div>
+<script src="js/sounds.js"></script><script src="js/auth.js"></script><script src="js/snake.js"></script>
+</body></html>
